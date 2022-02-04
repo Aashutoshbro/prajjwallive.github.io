@@ -1,0 +1,274 @@
+
+* {
+    box-sizing: border-box;
+    margin:0px;
+    padding:0px;
+  }
+/* css for the pop up modal in the page */
+.Update {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity:0;
+  }
+  .Update:target {
+    visibility: visible;
+    opacity: 1;
+    z-index: 999;
+  }
+  
+  .popup {
+    margin: 10px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 31.8%;
+    position: relative;
+    transition: all 4s ease-in-out;
+    
+  }
+  
+  .popup h2 {
+    margin-top: 0;
+    color: #333;
+    font-family:sans-serif;
+  }
+  .popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+  }
+  .popup .close:hover {
+    color: #06d85f;
+  }
+  .popup .contentUp {
+    max-height:30% ;
+    overflow: auto;
+  
+  }
+  
+  @media screen and (max-width: 700px) {
+    .box {
+      width: 70%;
+    }
+    .popup {
+      width: 70%;
+    }
+  }
+  .rareImg{
+    width: auto;
+    height: 85vh;
+  }
+  /* ...............................end of styling for the modal box................. */
+
+/* Use class 
+for Slide In and off
+  class="sliding-u-l-r-l"
+ */
+
+  /* Slide In, Slide Off */
+  .sliding-u-l-r-l {
+    display: inline-block;
+    position: relative;
+    padding-bottom: 14px;
+  }
+  .sliding-u-l-r-l:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 8px;
+    width: 0;
+    transition: width 0s ease;
+    background-color: 0.4s ease;
+  }
+  .sliding-u-l-r-l:after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 8px;
+    width: 0;
+    background:indianred;
+    transition: width 0.2s ease;
+  }
+  .sliding-u-l-r-l:hover:before {
+    width: 100%;
+    background:orange;
+    transition: width 0.5s ease;
+  }
+  .sliding-u-l-r-l:hover:after {
+    width: 100%;
+    background: transparent;
+    transition: all 0s ease;
+  }
+/* .......................end of the hover on textt effect.............. */
+
+/* for the animation of the number in the part */
+.numbEffect{
+    transform: scale(1);
+    transition: all 0.3s ease-in-out;
+
+}
+.numbEffect:hover{
+    transform: scale(2);
+    background-color: blanchedalmond;
+    color:orange;
+}
+.iconEffect{
+    transform: scale(1);
+    transition: all 0.3s ease-in-out;
+
+}
+.iconEffect:hover{
+    transform: scale(1.2);
+    background-color: orange;
+    color:blanchedalmond;
+}
+.butEffect{
+    transform: scale(0.95);
+    transition: all 0.3s ease-in-out;
+    margin: 10px;
+
+}
+.butEffect:hover{
+    transform: scale(1.1);
+    background-color:rgb(5, 255, 5);
+    color:black;
+}
+.MonkEffect{
+    transform: scale(1);
+    transition: all 0.3s ease-in-out;
+    margin: 10px;
+    border:8px solid orange;
+    border-radius: 8px;
+    
+}
+.MonkEffect:hover{
+    transform: scale(1.1);
+    background-color:rgb(5, 255, 5);
+    color:black;
+    border:8px solid red;
+    border-radius: 10px;    
+    box-shadow:  0 0 4em rgb(255, 153, 0);
+}
+
+/* .........................start of the info cards..................... */
+/* Float four columns side by side */
+.columna {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+  }
+  
+  
+  
+  /* Clear floats after the columns */
+  .rowa:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive columns */
+  @media screen and (max-width: 768px) {
+    .columna {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+  
+  /* Style the counter cards */
+  
+  .maincard {
+    max-width: 280px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+    padding: 20px;
+    border:8px;
+    transform: scale(1) ;
+    transition: all 250ms ease-in-out;
+
+  
+    
+  }
+  /* this is for the main card */
+  .maincard:hover{
+      box-shadow:  0 0 4em rgba(0,0,0,.35);
+      transform: scale(1.05);
+      padding: 20px;
+      border:8px;
+      transform: rotate(-18deg);
+  }
+  /* for the ceo and founder part */
+  .titleInfo {
+    font-size: 13px;
+    margin-top:6px;
+    margin-bottom:4px;;
+    font-weight: bold;
+    padding:6px;
+    border-radius: 6px;
+  }
+  /* this is for the image */
+  .ForImg{
+      width:50%;
+      border-radius:50%;
+      transform: scale(1);
+      transition: all 250ms ease-in-out;
+      position: relative;
+      left: 25%;
+      
+  }
+  .ForImg:hover{
+      animation: try2 3s infinite alternate;
+      
+  }
+  @keyframes try2 {
+      0% {border: 3.9px solid palegoldenrod;transform: scale(1.02);}
+    25%  {border: 3.8px solid gold;transform: scale(1.04);}
+    50%  {border: 3.7px solid lightblue;transform: scale(1.06);}
+    75%  {border: 3.8px solid yellow;transform: scale(1.04);}
+    100% {border: 3.9px solid orange;transform: scale(1.02);}
+  }
+  .try{
+  
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      padding:70px 16px 2px 20px;
+      border: 4px solid #f5f6fa;
+      border-radius:10px ;
+      animation: try1 8s infinite alternate;
+      margin-top: -32%;
+      
+  }
+  
+  @keyframes try1 {
+      0% {border: 4px solid #f5f6fa;padding:70px 16px 2px 20px;}
+    25%  {border: 4px solid #2a4fe6;padding:70px 16px 2px 20px;}
+    50%  {border: 4px solid #bbff00;padding:70px 16px 2px 20px;}
+    75%  {border: 4px solid #a8403d;padding:70px 16px 2px 20px;}
+    100% {border: 4px solid #f5f11c;padding:70px 16px 2px 20px;}
+  }
+  
+  .NameCol{
+      margin-top:6px;
+}
+.lastFooter{
+    height: 40vh;
+    margin-top:50px;
+}
+/* ...........................end of the info card................. */
+
